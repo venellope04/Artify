@@ -3,7 +3,7 @@
 if(isset($_POST['insert']))
 {
     $conn=mysql_connect("localhost","root","");
-    mysql_select_db("medtour");
+    mysql_select_db("artify");
     // echo "Connected"."</br>";
     
     $utype=$_POST['category'];
