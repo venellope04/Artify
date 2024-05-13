@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <style>
+        body {
+    margin: 0;
+    font-family: Poppins;
+}
+
+header {
+    background-color: #353432;
+    color: #eee;
+    padding: 20px;
+    text-align: center;
+}
+
+.cart-container {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.cart-items {
+    width: 100%;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.cart-item img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.item-info h3 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.item-info p {
+    margin: 5px 0;
+    font-size: 1rem;
+}
+
+.remove-btn {
+    background-color: #E8BC0E;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.cart-total {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#total-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+#checkout-btn {
+    background-color: #E8BC0E;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Shopping Cart</h1>
+    </header>
+
+    <div class="cart-container">
+        <div class="cart-items">
+            <!-- Cart items will be dynamically inserted here -->
+        </div>
+        <div class="cart-total">
+            <h2>Total: <span id="total-price">₹0.00</span></h2>
+            <button id="checkout-btn">Checkout</button>
+        </div>
+    </div>
+
+    <script src="cart.js"></script> <!-- Link to your JavaScript file for cart functionality -->
+</body>
+</html>
