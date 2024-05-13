@@ -4,6 +4,7 @@
     --secondary: #F57E57;
     --light: #EEF9FF;
     --dark: #091E3E;
+    --purple:  #6a1cb8;
 }
 
 h1,
@@ -280,12 +281,12 @@ h6,
 }
 
 .bg-testimonial {
-    background: url(../img/carousel-2.jpg) center center no-repeat;
+    background: url(../img/carasouel1.png) center center no-repeat;
     background-size: cover;
 }
 
 .testimonial-carousel {
-    background: rgba(6, 163, 218, .85);
+    background: linear-gradient(to right, rgba(230, 126, 34, 0.5), rgba(155, 89, 182, 0.5), rgba(52, 152, 219, 0.5)); 
 }
 
 .testimonial-carousel .owl-nav {
@@ -320,6 +321,16 @@ h6,
 }
 
 .testimonial-carousel .owl-item img {
-    width: 120px;
-    height: 120px;
+    width: 150px;
+    height: 150px;
+}
+.btn-purple {
+    background-color: #8a2be2; /* Adjust the color as needed */
+    color: #fff; /* Text color */
+    border-color: #8a2be2; /* Border color */
+}
+
+.btn-purple:hover {
+    background-color: #6a1cb8; /* Adjust the hover color as needed */
+    border-color: #6a1cb8; /* Adjust the hover border color as needed */
 }
