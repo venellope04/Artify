@@ -3,7 +3,7 @@
 $host = "localhost:3308"; // Host name
 $username = "root"; // MySQL username
 $password = ""; // MySQL password
-$database = "Artify"; // Database name
+$database = "artify"; // Database name
 
 // Retrieve product data from the POST request
 $productID = $_POST['product_id'];

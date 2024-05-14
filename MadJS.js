@@ -19,7 +19,7 @@ closeCart.addEventListener('click', () => {
 // Function to fetch product data from PHP endpoint
 
 const fetchProductData = () => {
-    fetch('Pixget_products.php')
+    fetch('Madget_products.php')
       .then(response => response.json())
       .then(products => {
         // Pass products data to addToCart function

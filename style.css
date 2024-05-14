@@ -1,6 +1,7 @@
 body{
     margin: 0;
     font-family: Poppins;
+    
 }
 .container{
     width: 900px;
@@ -49,7 +50,7 @@ header{
     gap: 20px;
 }
 .listProduct .item{
-    background-color: #EEEEE6;
+    background-color: #282822;
     padding: 20px;
     border-radius: 20px;
 }
@@ -106,7 +107,7 @@ body.showCart .container{
     cursor: pointer;
 }
 .cartTab .close{
-    background-color: #eee;
+    background-color: #120f0f;
 }
 .listCart .item img{
     width: 100%;
