@@ -19,7 +19,7 @@ closeCart.addEventListener('click', () => {
 // Function to fetch product data from PHP endpoint
 
 const fetchProductData = () => {
-    fetch('Pixget_products.php')
+    fetch('Vecget_products.php')
       .then(response => response.json())
       .then(products => {
         // Pass products data to addToCart function
@@ -133,7 +133,7 @@ const addCartToHTML = (products) => {
                 ${info.image ? `<img src="${info.image}">` : '<div class="no-image">No Image</div>'}
               </div>
               <div class="name">${info.name || 'Unknown Product'}</div>
-              <div class="totalPrice">₹${(info.price || 0) * item.quantity}</div>
+              <div class="totalPrice">$${(info.price || 0) * item.quantity}</div>
             <div class="quantity">
                 <span class="minus"><</span>
                 <span>${item.quantity}</span>
@@ -199,6 +199,5 @@ document.addEventListener("DOMContentLoaded", function() {
         window.location.href = 'cart.html';
     });
 });
-
 // Initial fetch of product data
 fetchProductData();
