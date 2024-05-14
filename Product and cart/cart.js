@@ -49,33 +49,36 @@ document.addEventListener("DOMContentLoaded", function() {
             removeItemFromCart(itemId);
         }
     });
+// Function to remove item from cart
+const removeItemFromCart = itemId => {
+    // Prepare form data
+    const formData = new FormData();
+    formData.append('id', itemId);
 
-    // Function to remove item from cart
-    const removeItemFromCart = itemId => {
-        // Prepare request data
-    const requestData = { id: itemId };
-        fetch("remove_from_cart.php", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(requestData) // Send item ID in the request body
-        })
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.json();
-        })
-        .then(data => {
-            // Display updated cart items
-            fetchCartData();
-        })
-        .catch(error => {
-            console.error("Error removing item from cart:", error);
-        });
-    };
-
+    // Send request with form data
+    fetch("remove_from_cart.php", {
+        method: "POST",
+        body: formData // Send form data in the request body
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.json();
+    })
+    .then(data => {
+        // Handle the response from the server
+        if (data.success) {
+            // Handle success response
+        } else {
+            // Handle error response
+        }
+    })
+    .catch(error => {
+        console.error("Error during request:", error);
+        // Handle potential errors
+    });
+};
     // Initial display of cart items
     fetchCartData();
 
