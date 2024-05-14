@@ -50,7 +50,7 @@ header{
     gap: 20px;
 }
 .listProduct .item{
-    background-color: #282822;
+    background-color: #e0e0d9;
     padding: 20px;
     border-radius: 20px;
 }
@@ -135,7 +135,7 @@ body.showCart .container{
     cursor: auto;
 }
 .listCart .item:nth-child(even){
-    background-color: #eee1;
+    background-color: rgb(255, 255, 255);
 }
 .listCart{
     overflow: auto;
