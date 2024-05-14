@@ -3,7 +3,7 @@
 $host = "localhost:3308"; // Host name
 $username = "root"; // MySQL username
 $password = ""; // MySQL password
-$database ="artify"; // Database name
+$database ="Artify"; // Database name
 
 try {
     // Create PDO connection

@@ -13,11 +13,11 @@ if(isset ($_POST['Submit']))
     $mobileno=$_POST['D7'];
    $SecurityQuestion=$_POST['D8'];
     $SecurityAnswer=$_POST['D9'];
-//    echo $usercat,$address,$SecurityAnswer;  
+  // echo $usercat,$address,$SecurityAnswer;  
 $con=mysql_connect("localhost","root","");  
 if($con)
 {
-    // echo "Connected to MySQL"."<br/>";
+     echo "Connected to MySQL"."<br/>";
 } 
 
 $password=md5($password);
@@ -27,7 +27,7 @@ if(mysql_query($sql,$con))
 
 {
 
-// echo "Record Updated Successfully";
+ //echo "Record Updated Successfully";
 echo "<script>alert('Record Updated');</script>";
   echo ("<script LANGUAGE='JavaScript'>window. location. href='RegistrationEdit.php';</script>");
 }

@@ -3,7 +3,7 @@
 $servername = "localhost:3308";
 $username = "root";
 $password = "";
-$dbname = "artify";
+$dbname = "Artify";
 
 // Check if the id is provided in the request
 if(isset($_POST['id'])) {

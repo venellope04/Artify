@@ -3,7 +3,7 @@
 $servername = "localhost:3308";
 $username = "root";
 $password = "";
-$dbname = "artify";
+$dbname = "Artify";
 
 try {
     // Create a PDO instance

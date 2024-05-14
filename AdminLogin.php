@@ -1,28 +1,18 @@
 <?php
+// Check if the form is submitted
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Retrieve username and password from the form
+    $username = $_POST['username'];
+    $password = $_POST['password'];
 
-if(isset($_POST['insert']))
-{
-    $conn=mysql_connect("localhost","root","");
-    mysql_select_db("attg");
-    //echo "Connected"."</br>";
-    
-    $Username=$_POST['username'];
-    $Password=$_POST['password'];
-    
-    
-    //echo $Fname,$Fdesg,$Fmail;
-    $sql="insert into login values('$Username','$Password')";
-    if(mysql_query($sql,$conn))
-    {
-        echo "<script>alert('Login Successful');</script>";
-        echo ("<script LANGUAGE='JavaScript'>window. location. href='index2.html';</script>");
-    }
-    else
-    {
-        echo "<script>alert('Something is wrong please add again');</script>";
-        echo ("<script LANGUAGE='JavaScript'>window. location. href='AdminLogin.html';</script>");
+    // Validate the username and password (you can add more robust validation as needed)
+    if ($username === 'admin' && $password === 'admin123') {
+        // If the credentials are valid, redirect to a success page or perform further actions
+        header("Location: index2.html");
+        exit;
+    } else {
+        // If the credentials are invalid, display an error message
+        echo "<script>alert('Invalid username or password. Please try again.');</script>";
     }
 }
-mysql_close($conn);
-
 ?>
