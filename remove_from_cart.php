@@ -3,7 +3,7 @@
 $servername = "localhost:3308";
 $username = "root";
 $password = "";
-$dbname = "Artify";
+$dbname = "artify";
 
 // Check if the id is provided in the request
 if(isset($_POST['id'])) {
@@ -22,8 +22,14 @@ if(isset($_POST['id'])) {
         $stmt->bindParam(':id', $id);
         $stmt->execute();
         
-        // Return success response
-        echo json_encode(["success" => true]);
+        // Check if any rows were affected
+        if ($stmt->rowCount() > 0) {
+            // Return success response
+            echo json_encode(["success" => true]);
+        } else {
+            // Return error response if no rows were affected
+            echo json_encode(["error" => "Item not found in the cart"]);
+        }
     } catch(PDOException $e) {
         // Return error response
         echo json_encode(["error" => "Error removing item from cart: " . $e->getMessage()]);

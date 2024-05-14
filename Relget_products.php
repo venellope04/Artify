@@ -3,7 +3,7 @@
 $host = "localhost:3308"; // Host name
 $username = "root"; // MySQL username
 $password = ""; // MySQL password
-$database ="artify"; // Database name
+$database ="Artify"; // Database name
 
 try {
     // Create PDO connection
@@ -11,7 +11,7 @@ try {
     
     // Set PDO to throw exceptions on error
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $sql = "SELECT productID, name, price, image FROM pixelart";
+    $sql = "SELECT productID, name, price, image FROM relart";
     $stmt = $pdo->query($sql);
 
     // Check if the query was executed successfully
